@@ -1,0 +1,37 @@
+import random
+import time
+print("Bem vindo ao meu bitlife!!")
+df = ["Andar","Brincar"]
+while True:
+    feito = int(input("Você acabou de nascer, coisas que você pode fazer, 1 para tentar andar e 2 para brincar "))
+    idade = 0
+    print(f"Sua idade = {idade}")
+    if feito==1:
+        rng = random.randint(1,100)
+        if rng>90:
+            print("Você conseguiu dar seus primeiros passos! parabêns!")
+            ca = True
+            vi = int(input("Você quer voltar para o início? 1 para sim e 2 para sair"))
+            if vi==1:
+                print("Ok!")
+            elif vi==2:
+                print("Saindo...")
+                time.sleep(3.5)
+                print("Voce saiu com sucesso!")
+                break
+        else:
+            print("Número invalido!")
+    else:
+        print("Você não conseguiu, tentar novamente?")
+        ca = False
+        tn = int(input("1 para sim e 2 para sair "))
+        if tn==1:
+            print(f"Sua idade {idade}")
+        elif tn==2:
+            print("Saindo...")
+            time.sleep(3.5)
+            print("Voce saiu com sucesso!")
+            break
+            
+            
+            
