@@ -1,37 +1,67 @@
-import random
-import time
-print("Bem vindo ao meu bitlife!!")
-df = ["Andar","Brincar"]
 while True:
-    feito = int(input("Você acabou de nascer, coisas que você pode fazer, 1 para tentar andar e 2 para brincar "))
-    idade = 0
-    print(f"Sua idade = {idade}")
-    if feito==1:
-        rng = random.randint(1,100)
-        if rng>90:
-            print("Você conseguiu dar seus primeiros passos! parabêns!")
-            ca = True
-            vi = int(input("Você quer voltar para o início? 1 para sim e 2 para sair"))
-            if vi==1:
-                print("Ok!")
-            elif vi==2:
-                print("Saindo...")
-                time.sleep(3.5)
-                print("Voce saiu com sucesso!")
-                break
-        else:
-            print("Número invalido!")
+    import random, time
+    print("Você estava na floresta, quando de repente, acha um monstro, ele é um lobo, derrote-o!")
+    vdl = 1500
+    vida = 100
+    rng = random.randint(1,6)
+    input("Digite algo para continuar! ")
+    print("Girando o dado....")
+    time.sleep(3)
+    if rng==1:
+        d1 = random.randint(0,250)
+        print(f"Sua espada não estava muito afiada, você deu {d1} de dano")
+        vdl-=d1
+        time.sleep(1.5)
+        print(f"O lobo está com {vdl} de vida")
+    elif rng==2:
+        d2 = random.randint(251,500)
+        print(f"Sua espada estava um pouquinho afiada, você deu {d2} de dano")
+        vdl-=d2
+        time.sleep(1.5)
+        print(f"O lobo está com {vdl} de vida")
+    elif rng==3:
+        d3 = random.randint(501,750)
+        print(f"Sua espada estava afiada, você deu {d3} de dano")
+        vdl-=d3
+        time.sleep(1.5)
+        print(f"O lobo está com {vdl} de vida")
+    elif rng==4:
+        d4 = random.randint(751,800)
+        print(f"Sua espada estava um bem afiada, você deu {d4} de dano")
+        vdl-=d4
+        time.sleep(1.5)
+        print(f"O lobo está com {vdl} de vida")
+    elif rng==5:
+        d5 = random.randint(801,900)
+        print(f"Sua espada estava  muito bem afiada, você deu {d5} de dano")
+        vdl-=d5
+        time.sleep(1.5)
+        print(f"O lobo está com {vdl} de vida")
     else:
-        print("Você não conseguiu, tentar novamente?")
-        ca = False
-        tn = int(input("1 para sim e 2 para sair "))
-        if tn==1:
-            print(f"Sua idade {idade}")
-        elif tn==2:
-            print("Saindo...")
-            time.sleep(3.5)
-            print("Voce saiu com sucesso!")
-            break
-            
-            
-            
+        d6 = random.randint(901,1000)
+        print(f"Sua espada estava EXTREMAMENTE BEM AFIADA, você deu {d6} de dano")
+        vdl-=d6
+        time.sleep(1.5)
+        print(f"O lobo está com {vdl} de vida")
+    rng2 = random.randint(10,30)
+    print(f"O lobo te deu {rng2} de dano")
+    vida-=rng2
+    print(f"Você está com {vida} de vida")
+    if vida==0:
+        print("Você perdeu!!")
+        break
+    if vdl<=750:
+        print("O lobo é um covarde! ele fugiu para uma caverna!")
+        print("Você persegue ele!")
+              
+        
+    
+    
+
+
+
+
+
+
+
+
